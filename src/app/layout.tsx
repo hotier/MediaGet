@@ -3,6 +3,7 @@ import "./globals.css";
 import RootExtras from "@/components/RootExtras";
 import SiteHeader from "@/components/SiteHeader";
 import { siteConfig } from "@/config/site";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -134,6 +135,7 @@ export default function RootLayout({
           {/* 回到顶部 + 页脚：沉浸式页面（/music）中由 RootExtras 自行隐藏 */}
           <RootExtras />
         </div>
+        <Analytics />
       </body>
     </html>
   );
